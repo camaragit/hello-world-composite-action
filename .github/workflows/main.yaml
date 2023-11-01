@@ -9,5 +9,6 @@ jobs:
         uses: ./actions
         with:
           who-to-greet: 'Mona the Octocat'
+          to-execute: 'true'
      # - run: echo random-number ${{ steps.foo.outputs.random-number }}
        # shell: bash
