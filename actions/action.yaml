@@ -15,7 +15,7 @@ runs:
   using: "composite"
   steps:
     - name: test
-      if: "${{ inputs.to-execute =='true' }}"
+      if: ${{ inputs.to-execute =='true' }} && github.head_ref == 'test'
       shell: bash
       run: echo hello ${{ inputs.who-to-greet }}
 #    - run: echo Hello ${{ inputs.who-to-greet }}.
