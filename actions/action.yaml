@@ -17,7 +17,7 @@ runs:
     - name: test
       if: "${{ inputs.to-execute =='true' }}"
       shell: bash
-      run: echo 'dame camara'
+      run: echo hello ${{ inputs.who-to-greet }}
 #    - run: echo Hello ${{ inputs.who-to-greet }}.
  #     shell: bash
 #    - id: random-number-generator
