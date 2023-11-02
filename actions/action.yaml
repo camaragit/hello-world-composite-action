@@ -19,6 +19,7 @@ runs:
       shell: bash
       run: |
           echo hello ${{ inputs.who-to-greet }} 
+          echo ${{ toJSON(github) }}
 
 
 #    - run: echo Hello ${{ inputs.who-to-greet }}.
