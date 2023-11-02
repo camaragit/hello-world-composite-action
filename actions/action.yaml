@@ -15,7 +15,7 @@ runs:
   using: "composite"
   steps:
     - name: test
-      if: ${{ github.ref == 'refs/heads/main' && inputs.who-to-greet=='true'}}
+      if: ${{ github.ref == 'refs/heads/main' && inputs.to-execute=='true'}}
       shell: bash
       run: |
           echo hello ${{ inputs.who-to-greet }} 
