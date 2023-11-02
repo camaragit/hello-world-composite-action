@@ -17,7 +17,8 @@ runs:
     - name: test
       if: ${{ inputs.to-execute =='false' }}
       shell: bash
-      run: [[ $GITHUB_REF == 'ref/head/test' ]] && echo hello ${{ inputs.who-to-greet }}
+      run: |
+         if [[ $GITHUB_REF == 'ref/head/test' ]] ; then echo hello ${{ inputs.who-to-greet }} fi
 #    - run: echo Hello ${{ inputs.who-to-greet }}.
  #     shell: bash
 #    - id: random-number-generator
