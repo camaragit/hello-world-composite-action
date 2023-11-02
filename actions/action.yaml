@@ -18,8 +18,11 @@ runs:
       if: ${{ inputs.to-execute =='false' }}
       shell: bash
       run: |
-         if [[ $GITHUB_REF == 'ref/head/test' ]] ; then echo hello ${{ inputs.who-to-greet }} fi
-         exit 0
+        if [[ "${{inputs.myVar}}" != "" ]]; then
+          echo hello ${{ inputs.who-to-greet }} 
+        fi
+        exit 0
+
 #    - run: echo Hello ${{ inputs.who-to-greet }}.
  #     shell: bash
 #    - id: random-number-generator
