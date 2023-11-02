@@ -18,7 +18,7 @@ runs:
       if: ${{ inputs.to-execute =='false' }}
       shell: bash
       run: |
-        if [[ "${{inputs.myVar}}" != "" ]]; then
+        if [[ $GITHUB_REF == 'ref/head/develop' ]]; then
           echo hello ${{ inputs.who-to-greet }} 
         fi
         exit 0
