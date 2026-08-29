@@ -1,0 +1,10 @@
+on:
+  push:
+    tags:
+      - test
+jobs:
+  tag_push:
+    runs-on: ubuntu-latest
+    name: echo bonjour
+    steps:
+      - run: echo Bonjour Dame
